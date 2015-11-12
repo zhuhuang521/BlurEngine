@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BlurImageView">
+        <attr name="blurImage" format="reference"></attr>
+        <attr name="autoBlur" format="boolean"></attr>
+        <attr name="minRadius" format="integer"></attr>
+        <attr name="maxRadius" format="integer"></attr>
+        <attr name="during" format="integer"></attr>
+        <attr name="scale" format="integer"></attr>
+        <attr name="finalRadius" format="integer"></attr>
+    </declare-styleable>
+
+
+</resources>
