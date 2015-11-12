@@ -176,7 +176,7 @@ public class ImageLoad {
     public static String getDefaultPath(Context context) {
         File file = context.getExternalFilesDir(null);
         if(file==null){
-            return  Environment.getExternalStorageState()+"/Android/data/com.Quhuhu/files/";
+            return  Environment.getExternalStorageState()+"/Android/data/com.zxs.blurImage/files/";
         }else{
             if(!file.exists()){
                 file.mkdirs();
@@ -188,7 +188,7 @@ public class ImageLoad {
     public static String getStorePath(Context context) {
         File file = context.getExternalFilesDir(null);
         if(file==null){
-            return  Environment.getExternalStorageState()+"/Android/data/com.Quhuhu/files";
+            return  Environment.getExternalStorageState()+"/Android/data/com.zxs.blurImage/files";
         }else{
             if(!file.exists()){
                 file.mkdirs();
