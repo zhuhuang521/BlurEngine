@@ -26,7 +26,7 @@ android {
     sourceSets
             {
                 main {
-                    jniLibs.srcDirs = ['src/main/jniLibs']
+                    jniLibs.srcDirs = ['src/main/jni']
                     manifest.srcFile 'src/main/AndroidManifest.xml'
                     java.srcDirs = get_dirs('/main/java')
                     aidl.srcDirs = java.srcDirs
