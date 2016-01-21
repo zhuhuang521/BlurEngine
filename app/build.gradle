@@ -9,14 +9,31 @@ android {
         targetSdkVersion 19
         versionCode 1
         versionName "1.0"
-        ndk{
-            moduleName "blurjni"
-            ldLibs "m", "log", "jnigraphics"
-        }
     }
     lintOptions {
         abortOnError false
     }
+    def modules = ['src']
+
+    def get_dirs = {
+        type ->
+            def dirs = []
+            modules.each {
+                dirs << it + type
+            }
+            dirs
+    }
+    sourceSets
+            {
+                main {
+                    jniLibs.srcDirs = ['src/main/jniLibs']
+                    manifest.srcFile 'src/main/AndroidManifest.xml'
+                    java.srcDirs = get_dirs('/main/java')
+                    aidl.srcDirs = java.srcDirs
+                    res.srcDirs = get_dirs('/main/res');
+                    assets.srcDirs = get_dirs('/main/assets')
+                }
+            }
 
     buildTypes {
         release {
